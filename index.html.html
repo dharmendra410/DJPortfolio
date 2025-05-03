@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dharmendra Jat | Web Developer</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #ffffff;
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1c1c1c);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    nav .social-links a {
+      color: #ffffff;
+      margin-left: 1rem;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    nav .social-links a:hover {
+      color: #00ffff;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      animation: fadeInUp 2s ease;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-content .buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #00ffff;
+      color: #00ffff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .hero-content .buttons a:hover {
+      background-color: #00ffff;
+      color: #000000;
+    }
+
+    .hero-image img {
+      width: 300px;
+      max-width: 100%;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .skills {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.05);
+      border-top: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .skills h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #00ffff;
+    }
+
+    .skills-logos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+
+    .skills-logos img {
+      width: 100%;
+      max-height: 80px;
+      object-fit: contain;
+      background: #111;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffff55;
+      transition: transform 0.3s;
+    }
+
+    .skills-logos img:hover {
+      transform: scale(1.1);
+    }
+
+    .testimonials {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .testimonials h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #00ffff;
+    }
+
+    .testimonial {
+      max-width: 700px;
+      margin: 1.5rem auto;
+      background: #1c1c1c;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    }
+
+    .testimonial p {
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial span {
+      display: block;
+      font-weight: bold;
+      color: #00ffff;
+    }
+
+    .contact {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact p {
+      margin-bottom: 2rem;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #00ffff;
+      color: #00ffff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .contact a:hover {
+      background-color: #00ffff;
+      color: #000000;
+    }
+
+    .footer {
+      padding: 2rem;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-top: 1px solid #00ffff22;
+      font-size: 0.9rem;
+      color: #888;
+      animation: fadeIn 2s ease;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+
+      .hero-content {
+        max-width: 50%;
+      }
+
+      .hero-image {
+        max-width: 40%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Dharmendra Jat</div>
+    <div class="social-links">
+      <a href="https://github.com/DharmendraJat" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/dharmendrajat" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:dharmendra.jat@example.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm Dharmendra Jat 👋</h1>
+      <p>I'm a passionate web developer specializing in front-end technologies. I create responsive, user-friendly websites and web applications with a focus on performance and aesthetics.</p>
+      <div class="buttons">
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Boy Coding Illustration" />
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h2>Skills & Tools</h2>
+    <div class="skills-logos">
+      <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+      <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+      <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+      <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+      <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+      <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+      <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
+      <img src="https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white" alt="Canva" />
+      <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
+      <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify" />
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial">
+      <p>"Dharmendra is a highly skilled and reliable developer. He turned our vision into a functional, beautiful website with ease."</p>
+      <span>- Ramesh Kumar, Project Manager</span>
+    </div>
+    <div class="testimonial">
+      <p>"Working with Dharmendra was a pleasure. His attention to detail and commitment to quality is unmatched."</p>
+      <span>- Anjali Sharma, UI/UX Designer</span>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>I'm open to new opportunities and collaborations. Feel free to reach out!</p>
+    <a href="mailto:dharmendra.jat@example.com">Email Me</a>
+    <a href="https://www.linkedin.com/in/dharmendrajat" target="_blank">LinkedIn</a>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 Dharmendra Jat. All rights reserved.
+  </footer>
+</body>
+</html>
